@@ -857,5 +857,51 @@ ul.social_icon li a:hover {
      opacity: 1;
 }
 
+.body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+.header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+.section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+.img_responsive {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+.abo_btn {
+            text-align: center;
+            margin-top: 1em;
+            max-width: 100%;
+            height: 100vh;
+            display: 60%;
+            margin: 0 auto;
+        }
+.table {
+          width: 70%;
+          height: 50vh; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+   
+
 
 /** end contact section **/
