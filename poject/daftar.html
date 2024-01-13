@@ -8,6 +8,7 @@
 
   </head>
   <body>
+    <div >
         <!-- area component -->
         <section class="area_component">
           <!-- area label -->
@@ -24,6 +25,7 @@
               placeholder="Isi Nama Siswa"
               class="txt_component"
             />
+           
           </section>
         </section>
 
@@ -65,13 +67,17 @@
               id="txt_email"
               placeholder="Masukkan Email"
               class="txt_component"
+              oninput="validateEmailInput(this)"
             />
           </section>
         </section>
+      </div>
 
     <hr />
     <form action="login.html">
-    <input type="submit" value="Simpan" >
+    <input type="submit" value="Simpan" onclick="saveHandler(event)" >
+    <button type="submit" class="delete-button" onclick="deleteHandler(event)">Hapus</button>
+    
   </form>
 
     <!-- internal js -->
@@ -81,7 +87,7 @@
       // inisialiasi variabel komponen
       let txt_nama = document.querySelector("#txt_nama");
       let txt_npm = document.querySelector("#txt_no");
-      let txt_email = document.querySelector("#txt_email")
+      let txt_email = document.querySelector("#txt_email");
 
 
             //  buat arrow function agar isi data hanya dapat diisi huruf dan spasi
@@ -105,6 +111,12 @@
           return false;
         }
       };
+
+        // Fungsi untuk validasi input email
+  function validateEmailInput(input) {
+    // Hapus karakter yang tidak sesuai dari nilai input
+    input.value = input.value.replace(/[^a-zA-Z0-9.@]/g, '');
+  }
 
       //  buat arrow function agar dapat berpindah ke komponen lain
       const keyEnter = (event, component) => {
@@ -131,6 +143,35 @@
       // panggil fungsi "keyEnter" agar dapat berpindah dari komponen "txt_npm" ke "txt_nama"
       txt_nama.addEventListener("keyup", (event) => keyEnter(event, txt_no));
       txt_no.addEventListener("keyup", (event) => keyEnter(event, txt_email));
+
+       // Fungsi untuk menyimpan data
+  function saveHandler(event) {
+    event.preventDefault(); // Menghentikan aksi default formulir (refresh halaman)
+
+    // Validasi apakah semua komponen terisi
+    if (txt_nama.value.trim() === '' || txt_no.value.trim() === '' || txt_email.value.trim() === '') {
+      alert("Semua komponen harus diisi sebelum menyimpan!");
+      return;
+    }
+
+    // Tempatkan logika penyimpanan atau tindakan lainnya di sini
+    alert("Data berhasil disimpan!");
+  }
+
+
+      function deleteHandler(event) {
+    event.preventDefault(); // Menghentikan aksi default formulir (refresh halaman)
+
+    // Tempatkan logika penghapusan atau tindakan lainnya di sini
+    var userConfirmed = confirm("Apakah anda yakin ingin menghapus?");
+
+    if (userConfirmed) {
+      location.reload(); // Fungsi untuk merefresh halaman
+    } else {
+      // Jika pengguna membatalkan hapus, tambahkan logika sesuai kebutuhan
+      alert("Penghapusan dibatalkan.");
+    }
+  }
     </script>
   </body>
 </html>
