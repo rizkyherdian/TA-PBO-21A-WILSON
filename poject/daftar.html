@@ -53,25 +53,46 @@
       </section>
     </section>
 
-        <!-- area component -->
-        <section class="area_component">
-          <!-- area label -->
-          <section class="area_label">
-            <label for="txt_email">Masukkan Email</label>
-          </section>
-    
-          <!-- area input -->
-          <section class="area_input">
-            <input
-              type="text"
-              name=""
-              id="txt_email"
-              placeholder="Masukkan Email"
-              class="txt_component"
-              oninput="validateEmailInput(this)"
-            />
-          </section>
-        </section>
+<!-- area component -->
+<section class="area_component">
+  <!-- area label for email -->
+  <section class="area_label">
+    <label for="txt_email">Masukkan Email</label>
+  </section>
+
+  <!-- area input for email -->
+  <section class="area_input">
+    <input
+      type="text"
+      name=""
+      id="txt_email"
+      placeholder="Masukkan Email"
+      class="txt_component"
+      oninput="validateEmailInput(this)"
+    />
+  </section>
+</section>
+
+<section class="area_component">
+<!-- area label for gender -->
+<section class="area_label">
+  <label for="gender">Pilih Jenis Kelamin</label>
+</section>
+
+<!-- area input for gender (dropdown) -->
+<section class="area_input">
+  <select
+    id="gender"
+    class="txt_component"
+    onchange="validateGenderInput(this)"
+  >
+    <option value="" disabled selected>Pilih Jenis Kelamin</option>
+    <option value="laki-laki">Laki-laki</option>
+    <option value="perempuan">Perempuan</option>
+  </select>
+</section>
+</section>
+
       </div>
 
     <hr />
