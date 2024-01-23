@@ -59,9 +59,11 @@
       txt_no.addEventListener("keyup", (event) => keyEnter(event, txt_email));
       txt_email.addEventListener("keyup", (event) => keyEnter(event, txt_gender));
 
+      
        // Fungsi untuk menyimpan data
   function saveHandler(event) {
-    event.preventDefault(); // Menghentikan aksi default formulir (refresh halaman)
+    event.preventDefault(); 
+    // Menghentikan aksi default formulir (refresh halaman)
 
     // Validasi apakah semua komponen terisi
     if (txt_nama.value.trim() === '' || txt_no.value.trim() === '' || txt_email.value.trim() === '') {
@@ -86,3 +88,4 @@
       alert("Penghapusan dibatalkan.");
     }
   }
+
