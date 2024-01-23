@@ -1,3 +1,48 @@
+/* tampilan mobile */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 5px;
+  }
+
+  .area_component {
+    width: 90%;
+    display: flex;
+  }
+
+  .area_label {
+    width: 40%; 
+    margin-right: 5x; 
+  }
+  
+  .area_input {
+    width: 60%; 
+  }
+
+  .txt_component {
+    width: 100%;
+  }
+}
+
+/* tampilan tablet */
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+  body {
+    font-size: 16px;
+  }
+
+  .area_component {
+    width: 90%;
+  }
+}
+
+.area_label {
+  width: 35%; 
+  margin-right: 10px; 
+}
+
+.area_input {
+  width: 65%; 
+}
+
 .area_component {
     display: flex;
     align-items: center;
