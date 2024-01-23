@@ -57,6 +57,7 @@
       // panggil fungsi "keyEnter" agar dapat berpindah dari komponen "txt_npm" ke "txt_nama"
       txt_nama.addEventListener("keyup", (event) => keyEnter(event, txt_no));
       txt_no.addEventListener("keyup", (event) => keyEnter(event, txt_email));
+      txt_email.addEventListener("keyup", (event) => keyEnter(event, txt_gender));
 
        // Fungsi untuk menyimpan data
   function saveHandler(event) {
