@@ -89,3 +89,14 @@
     }
   }
 
+  function validateForm() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+        alert("Password baru dan konfirmasi password baru harus sama!");
+        return false;
+    }
+
+    return true;
+}
