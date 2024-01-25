@@ -89,10 +89,8 @@ function saveHandler(event) {
       return;
     }
   
-
   window.location.href = "login.html";
 }
-
 
       function deleteHandler(event) {
     event.preventDefault(); // Menghentikan aksi default formulir (refresh halaman)
