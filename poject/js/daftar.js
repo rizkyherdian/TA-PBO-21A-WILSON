@@ -83,6 +83,12 @@ function saveHandler(event) {
     return;
   }
 
+    // Validasi apakah bidang email diisi dengan akhiran "@gmail.com"
+    if (!txt_email.value.trim().endsWith('@gmail.com')) {
+      alert('Harap isi bidang email dengan alamat email yang valid berakhiran "@gmail.com"');
+      return;
+    }
+
     // Validasi apakah bidang konfirmasi kata sandi berisi "KONFIRMASI"
     if (txt_konfirmasi.value.trim() !== 'KONFIRMASI') {
       alert('Harap isi bidang konfirmasi dengan "KONFIRMASI"');
