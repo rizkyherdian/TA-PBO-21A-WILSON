@@ -2,6 +2,7 @@
       let txt_nama = document.querySelector("#txt_nama");
       let txt_npm = document.querySelector("#txt_no");
       let txt_email = document.querySelector("#txt_email");
+      let txt_password = document.querySelector("#txt_password");
 
 
             //  buat arrow function agar isi data hanya dapat diisi huruf dan spasi
@@ -57,7 +58,8 @@
       // panggil fungsi "keyEnter" agar dapat berpindah dari komponen "txt_npm" ke "txt_nama"
       txt_nama.addEventListener("keyup", (event) => keyEnter(event, txt_no));
       txt_no.addEventListener("keyup", (event) => keyEnter(event, txt_email));
-      txt_email.addEventListener("keyup", (event) => keyEnter(event, txt_gender));
+      txt_email.addEventListener("keyup", (event) => keyEnter(event, txt_password));
+      txt_password.addEventListener("keyup", (event) => keyEnter(event, txt_gender));
 
       
        // Fungsi untuk menyimpan data
