@@ -3,6 +3,7 @@
       let txt_npm = document.querySelector("#txt_no");
       let txt_email = document.querySelector("#txt_email");
       let txt_password = document.querySelector("#txt_password");
+      let txt_konfirmasi = document.querySelector("#txt_konfirmasi");
 
 
             //  buat arrow function agar isi data hanya dapat diisi huruf dan spasi
@@ -68,21 +69,29 @@
       txt_no.addEventListener("keyup", (event) => keyEnter(event, txt_email));
       txt_email.addEventListener("keyup", (event) => keyEnter(event, txt_password));
       txt_password.addEventListener("keyup", (event) => keyEnter(event, txt_gender));
+      
 
       
-       // Fungsi untuk menyimpan data
-  function saveHandler(event) {
-    event.preventDefault(); 
-    // Menghentikan aksi default formulir (refresh halaman)
+      // Fungsi untuk menyimpan data
+function saveHandler(event) {
+  event.preventDefault(); 
+  // Menghentikan aksi default formulir (refresh halaman)
 
-    // Validasi apakah semua komponen terisi
-    if (txt_nama.value.trim() === '' || txt_no.value.trim() === '' || txt_email.value.trim() === '') {
-      alert("Semua komponen harus diisi sebelum menyimpan!");
+  // Validasi apakah semua komponen terisi
+  if (txt_nama.value.trim() === '' || txt_no.value.trim() === '' || txt_email.value.trim() === '') {
+    alert("Semua komponen harus diisi sebelum menyimpan!");
+    return;
+  }
+
+    // Validasi apakah bidang konfirmasi kata sandi berisi "KONFIRMASI"
+    if (txt_konfirmasi.value.trim() !== 'KONFIRMASI') {
+      alert('Harap isi bidang konfirmasi dengan "KONFIRMASI"');
       return;
     }
+  
 
-    window.location.href = "login.html";
-  }
+  window.location.href = "login.html";
+}
 
 
       function deleteHandler(event) {
