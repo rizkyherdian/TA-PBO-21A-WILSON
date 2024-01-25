@@ -54,6 +54,14 @@
         (event) => (event.returnValue = keyText(event))
       );
 
+      // buat field pada kata sandi saat di ketik menampilkan bintang(Sensor)
+      function displayPassword(input) {
+        const passwordField = document.getElementById('txt_password');
+        const passwordValue = passwordField.value;
+        const maskedPassword = '*'.repeat(passwordValue.length);
+        input.value = maskedPassword;
+      }
+
       // buat event "keyup" (kejadian saat berhenti menekan (melepas) tombol tertentu)
       // panggil fungsi "keyEnter" agar dapat berpindah dari komponen "txt_npm" ke "txt_nama"
       txt_nama.addEventListener("keyup", (event) => keyEnter(event, txt_no));
