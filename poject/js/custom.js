@@ -109,6 +109,6 @@ function closeNav() {
 }
 
 function onSocialClick(socialMedia) {
-	alert('Anda mengklik tautan ' + socialMedia);
+	alert('Lanjut ke sosial media kami ' + socialMedia);
 	// Tambahkan kode atau aksi lain yang diinginkan di sini
 }
