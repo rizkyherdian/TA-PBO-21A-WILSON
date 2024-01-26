@@ -106,7 +106,6 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
-<<<<<<< HEAD
 }
 
 
@@ -327,6 +326,3 @@ function ekUpload(){
 $("#imageUpload").change(function() {
     readURL(this);
 });
-=======
-}
->>>>>>> 49f925e53a512ac395aae093efaae3991f7d295a
