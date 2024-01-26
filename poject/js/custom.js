@@ -107,3 +107,8 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
+
+function onSocialClick(socialMedia) {
+	alert('Anda mengklik tautan ' + socialMedia);
+	// Tambahkan kode atau aksi lain yang diinginkan di sini
+}

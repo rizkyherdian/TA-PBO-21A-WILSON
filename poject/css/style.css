@@ -685,6 +685,10 @@ ul.email li a {
      margin-top: 90px;
 }
 
+.text {
+     text-align: center;
+}
+
 .footer h3 {
      color: #ffffff;
      font-size: 26px;
@@ -693,14 +697,21 @@ ul.email li a {
      text-align: center;
 }
 
-ul.social_icon {
-     padding-top: 20px;
-}
+.social_icon i::after {
+     content: attr(data-text);
+     display: block;
+     margin-top: 5px;
+ }
 
-ul.social_icon li {
-     display: inline-block;
-     padding-right: 20px;
-}
+.social_icon {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .social_icon li {
+     margin-bottom: 10px;
+ }
 
 ul.social_icon li:last-child {
      padding-right: 0;
