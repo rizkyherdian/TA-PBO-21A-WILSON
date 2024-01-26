@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style3.css">
+    <title>Halaman Daftar</title>
+
+  </head>
+  <body>
+    <div class="center-text">Lengkapi Data Diri Anda</div>
+       <div >
+        <!-- area component -->
+        <section class="area_component">
+          <!-- area label -->
+          <section class="area_label">
+            <label for="txt_nama">Nama Siswa</label>
+          </section>
+    
+          <!-- area input -->
+          <section class="area_input">
+            <input
+              type="text"
+              name=""
+              id="txt_nama"
+              placeholder="Isi Nama Siswa"
+              class="txt_component"
+            />
+           
+          </section>
+        </section>
+
+    <!-- area component -->
+    <section class="area_component">
+      <!-- area label -->
+      <section class="area_label">
+        <label for="txt_no">No Handphone</label>
+      </section>
+
+      <!-- area input -->
+      <section class="area_input">
+        <input
+          type="text"
+          name=""
+          id="txt_no"
+          placeholder="Isi No Handphone"
+          class="txt_component"
+          onpaste="return false"
+          oncopy="return false"
+          oncut="return false"
+        
+        />
+      </section>
+    </section>
+
+<!-- area component -->
+<section class="area_component">
+  <!-- area label for email -->
+  <section class="area_label">
+    <label for="txt_email">Masukkan Email</label>
+  </section>
+
+  <!-- area input for email -->
+  <section class="area_input">
+    <input
+      type="text"
+      name=""
+      id="txt_email"
+      placeholder="Masukkan Email"
+      class="txt_component"
+      oninput="validateEmailInput(this)"
+    />
+  </section>
+</section>
+
+    <!-- area component -->
+    <section class="area_component">
+      <!-- area label for password -->
+      <section class="area_label">
+        <label for="txt_password">Masukkan Kata Sandi</label>
+      </section>
+
+      <!-- area input for password -->
+      <section class="area_input">
+        <input
+          type="password"
+          name=""
+          id="txt_password"
+          placeholder="Masukkan Kata Sandi"
+          class="txt_component"
+          oninput="displayPassword(this)"
+        />
+      </section>
+    </section>
+
+  <section class="area_component">
+<!-- area label for gender -->
+  <section class="area_label">
+    <label for="gender">Pilih Jenis Kelamin</label>
+  </section>
+
+<!-- area input for gender (dropdown) -->
+  <section class="area_input">
+    <select
+     id="txt_gender"
+     class="txt_component"
+     onchange="validateGenderInput(this)"
+  >
+     <option value="" disabled selected>Pilih Jenis Kelamin</option>
+     <option value="laki-laki">Laki-laki</option>
+      <option value="perempuan">Perempuan</option>
+   </select>
+  </section>
+</section>
+
+        <!-- area component -->
+        <section class="area_component">
+          <!-- area label for password -->
+          <section class="area_label">
+            <label for="txt_konfirmasi">Ketik "KONFIRMASI"</label>
+          </section>
+    
+          <!-- area input for password -->
+          <section class="area_input">
+            <input
+              type="text"
+              name=""
+              id="txt_konfirmasi"
+              placeholder="KONFIRMASI"
+              class="txt_component"
+            
+            />
+          </section>
+        </section>
+
+      </div>
+
+    <hr />
+    <form action="login.html">
+    <input type="submit" value="Simpan" onclick="saveHandler(event)" >
+    <button type="submit" class="delete-button" onclick="deleteHandler(event)">Hapus</button>
+    
+  </form>
+
+    <!-- internal js -->
+    <script src="js/daftar.js"></script>
+  </body>
+</html>

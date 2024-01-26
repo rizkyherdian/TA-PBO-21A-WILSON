@@ -1,0 +1,152 @@
+/* tampilan mobile */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 5px;
+  }
+
+  .area_component {
+    width: 90%;
+    display: flex;
+  }
+
+  .area_label {
+    width: 40%; 
+    margin-right: 5x; 
+  }
+  
+  .area_input {
+    width: 60%; 
+  }
+
+  .txt_component {
+    width: 100%;
+  }
+}
+
+/* tampilan tablet */
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+  body {
+    font-size: 16px;
+  }
+
+  .area_component {
+    width: 90%;
+  }
+}
+
+.area_label {
+  width: 35%; 
+  margin-right: 10px; 
+}
+
+.area_input {
+  width: 65%; 
+}
+
+.area_component {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    
+  }
+  .area_label {
+    width: 15%;
+  }
+  .area_input {
+    width: 85%;
+  }
+  .txt_component {
+    width: 100%;
+  }
+  
+  .area_description {
+    width: 100%;
+    line-height: 5px;
+  }
+
+  body {
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.80857;
+    font-weight: normal;
+    background: url(../images/bg-body.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .btn_simpan {
+    margin-right: auto;
+  }
+
+  form input[type="submit"] {
+    height: 50px;
+    margin-top: 30px;
+    color: #fff;
+    padding: 0;
+    border: none;
+    background: #5372F0;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #2c52ed;
+}
+
+form input {
+    width: 20%;
+    height: 100%;
+    outline: none;
+    padding: 0 45px;
+    font-size: 18px;
+    background: none;
+    caret-color: #5372F0;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 380px;
+  padding: 40px 90px 50px 30px;
+  background: #f2f3ef;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.delete-button {
+  width: 20%;
+  height: 10%;
+  margin-top: 30px;
+  outline: none;
+  font-size: 18px;
+  background-color: #ff0000; /* Warna latar belakang tombol hapus */
+  color: #fff; /* Warna teks tombol hapus */
+  padding: 15px 12px;
+  margin-left: 30px; /* Jarak antara tombol delete dan tombol simpan */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.center-text {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
